@@ -131,7 +131,7 @@ public class ConvenientBanner<T> extends LinearLayout {
     }
     public ConvenientBanner setPages(CBViewHolderCreator holderCreator, List<T> datas,List<String> mws) {
         this.mDatas = datas;
-        pageAdapter = new CBPageAdapter(holderCreator, mDatas);
+        pageAdapter = new CBPageAdapter(holderCreator, mDatas,mws);
         viewPager.setAdapter(pageAdapter, canLoop);
 
         if (page_indicatorId != null)

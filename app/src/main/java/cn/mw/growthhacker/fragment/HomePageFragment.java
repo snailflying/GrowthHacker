@@ -4,9 +4,12 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.zxinsight.TrackAgent;
 
 import cn.mw.growthhacker.adapter.DividerItemDecoration;
 import cn.mw.growthhacker.adapter.HomeAdapter;
@@ -21,6 +24,7 @@ public class HomePageFragment extends Fragment {
     public static final String ARGS_PAGE = "args_page";
     private int mPage;
     RecyclerView recyclerView;
+    private String TAG = "HomePageFragment";
 
     public static HomePageFragment newInstance(int page) {
         Bundle args = new Bundle();
@@ -29,6 +33,18 @@ public class HomePageFragment extends Fragment {
         HomePageFragment fragment = new HomePageFragment();
         fragment.setArguments(args);
         return fragment;
+    }
+
+    @Override
+    public void setUserVisibleHint(boolean isVisibleToUser) {
+        if (isVisibleToUser) {
+            Log.e(TAG, "HomePageFragment visible");
+            TrackAgent.currentEvent().onPageStart("首 页");
+
+        } else {
+            Log.e(TAG, "HomePageFragment invisible");
+            TrackAgent.currentEvent().onPageEnd("首 页");
+        }
     }
 
     @Override

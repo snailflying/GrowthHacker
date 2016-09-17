@@ -21,6 +21,7 @@ import android.widget.ImageView;
 
 import com.pizidea.imagepicker.AndroidImagePicker;
 import com.pizidea.imagepicker.bean.ImageItem;
+import com.zxinsight.TrackAgent;
 
 import java.util.List;
 
@@ -59,6 +60,18 @@ public class PushPageFragment extends Fragment {
         PushPageFragment fragment = new PushPageFragment();
         fragment.setArguments(args);
         return fragment;
+    }
+
+    @Override
+    public void setUserVisibleHint(boolean isVisibleToUser) {
+        if (isVisibleToUser) {
+            Log.e(TAG, "PushPageFragment visible");
+            TrackAgent.currentEvent().onPageStart("发布 页");
+
+        } else {
+            Log.e(TAG, "PushPageFragment invisible");
+            TrackAgent.currentEvent().onPageEnd("发布 页");
+        }
     }
 
     @Override

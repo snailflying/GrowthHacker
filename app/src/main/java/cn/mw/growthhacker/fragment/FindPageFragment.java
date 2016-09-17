@@ -5,9 +5,12 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.zxinsight.TrackAgent;
 
 import java.util.List;
 
@@ -39,6 +42,7 @@ public class FindPageFragment extends Fragment {
             "http://f.hiphotos.baidu.com/image/h%3D200/sign=1478eb74d5a20cf45990f9df460b4b0c/d058ccbf6c81800a5422e5fdb43533fa838b4779.jpg",
             "http://f.hiphotos.baidu.com/image/pic/item/09fa513d269759ee50f1971ab6fb43166c22dfba.jpg"
     };
+    private String TAG = "FindPageFragment";
 
     public static FindPageFragment newInstance(int page) {
         Bundle args = new Bundle();
@@ -47,6 +51,18 @@ public class FindPageFragment extends Fragment {
         FindPageFragment fragment = new FindPageFragment();
         fragment.setArguments(args);
         return fragment;
+    }
+
+    @Override
+    public void setUserVisibleHint(boolean isVisibleToUser) {
+        if (isVisibleToUser) {
+            Log.e(TAG, "FindPageFragment visible");
+            TrackAgent.currentEvent().onPageStart("首 页");
+
+        } else {
+            Log.e(TAG, "FindPageFragment invisible");
+            TrackAgent.currentEvent().onPageEnd("首 页");
+        }
     }
 
     @Override
