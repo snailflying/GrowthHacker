@@ -1,0 +1,195 @@
+<resources>
+    <string name="app_name">GrowthHacker</string>
+    <string name="camera">相机</string>
+    <string name="location">位置</string>
+    <string name="search">搜索</string>
+    <string name="help">帮助</string>
+    <string name="push">发布</string>
+    <string name="home">首页</string>
+    <string name="activity">活动</string>
+    <string name="share">分享</string>
+    <string name="title">首页list标题</string>
+    <string name="content">首页list内容</string>
+    <string name="rationale_sms">需要SD卡权限来读取照片</string>
+    <string name="say_some_word">请说点什么吧…</string>
+    <string name="user_management">魔窗</string>
+
+    <string name="share_closed">此活动的分享已关闭</string>
+
+    <string name="tour_detail_title">三亚（Sanya）</string>
+    <string name="tour_detail_name">三亚（Sanya）位于海南岛的最南端，是中国最南部的热带滨海旅游城市，是中国空气质量最好的城市、全国最长寿地区（平均寿命80岁）。三亚市别称鹿城，又被称为“东方夏威夷”，位居中国四大一线旅游城市三威杭厦”之首，拥有全岛最美丽的海滨风光。</string>
+    <string name="action_settings">Settings</string>
+    <string name="network_error">网络有问题</string>
+    <string name="finish_by_back_again">再按一次退出程序</string>
+
+    <string name="exit">退出</string>
+    <string name="retry">重试</string>
+    <string name="back">返回</string>
+    <string name="send">发送</string>
+    <string name="send_with_blank">发 送</string>
+    <string name="save">保存</string>
+    <string name="save_with_blank">保 存</string>
+    <string name="cancel">取消</string>
+    <string name="cancel_with_blank">取 消</string>
+    <string name="confirm">确认</string>
+    <string name="confirm_with_blank">确 认</string>
+    <string name="delete">删除</string>
+    <string name="delete_with_blank">删 除</string>
+    <string name="publish">发布</string>
+    <string name="publish_with_blank">发 布</string>
+    <string name="title_name">标题</string>
+    <string name="please_input_email_and_tel">请输入邮箱/电话号码</string>
+    <string name="please_input_password">请输入密码</string>
+    <string name="forget_the_password">忘记密码？</string>
+    <string name="register">注册</string>
+    <string name="register_with_blank">注 册</string>
+    <string name="login">登录</string>
+    <string name="login_with_blank">登 录</string>
+    <string name="logout">退出</string>
+    <string name="logout_with_blank">退 出</string>
+    <string name="user_have_quit">用户已退出</string>
+    <string name="settings">设置</string>
+    <string name="settings_with_blank">设 置</string>
+    <string name="auth">验证</string>
+    <string name="telephone_no">11位手机号</string>
+    <string name="telephone_auth_code">手机验证码</string>
+    <string name="six_more_password">6–32位密码</string>
+    <string name="input_password_again">再次确认密码</string>
+    <string name="slogan">做最好的工具，连接最好的人</string>
+    <string name="account_management">帐号</string>
+    <string name="my_storybook">我的故事书</string>
+    <string name="my_scene">我的场景</string>
+    <string name="scene_statistics">场景统计</string>
+    <string name="hot_scene">热门场景</string>
+
+    <string name="drawer_open">打开侧边栏</string>
+    <string name="drawer_close">关闭侧边栏</string>
+
+    <string name="menu_text_01">旅游</string>
+    <string name="menu_text_02">O2O</string>
+    <string name="menu_text_03">电影</string>
+    <string name="menu_text_04">电商</string>
+    <string name="menu_text_05">资讯</string>
+    <string name="menu_text_06">设置</string>
+    <string name="menu_text_07">联系我们</string>
+    <string name="menu_text_08">退出</string>
+
+    <string name="business_top_1">新品</string>
+    <string name="business_top_2">热销</string>
+    <string name="business_top_3">特惠</string>
+    <string name="business_top_4">分类</string>
+    <string name="business_top_5">超市</string>
+    <string name="business_top_6">充值</string>
+    <string name="business_top_7">预告</string>
+    <string name="business_top_8">更多</string>
+    <string name="city">城市</string>
+
+    <string name="o2o_top_1">脖子</string>
+    <string name="o2o_top_2">腰部</string>
+    <string name="o2o_top_3">全身</string>
+    <string name="o2o_top_4">更多</string>
+
+    <string name="custom_event_page">下面几个按钮分别模拟:进入购买页面，点击购买，以及购买成功。</string>
+    <string name="come_in_buy_page">进入购买页面</string>
+    <string name="click_to_buy">立即购买</string>
+    <string name="buy_done">购买完成</string>
+    <string name="price">￥14.90</string>
+    <string name="price_all">合计:￥14.90</string>
+
+
+    <string name="user_message">我的消息</string>
+    <string name="user_tip">功能介绍</string>
+    <string name="user_feedback">意见反馈</string>
+    <string name="user_survey">用户满意度调查，赢Apple Watch！</string>
+    <string name="share_to_friend">分享应用给好友</string>
+    <string name="my_achievement">邀请好友赢积分</string>
+    <string name="my_friend">我的小伙伴</string>
+    <string name="my_learn">引导页</string>
+
+    <string name="home_list_title">首页list标题</string>
+    <string name="home_list_description">首页list描述</string>
+    <string name="view_all">VIEW ALL</string>
+
+
+    <string name="user_profile_page">下面几个按钮分别模拟:只以手机号登录，只以邮箱登录，以userId登录（附带所有信息，包括手机号、邮箱、性别等），注销登录</string>
+    <string name="phone">手机号</string>
+    <string name="phone_please">请输入手机号</string>
+    <string name="email">邮箱</string>
+    <string name="email_please">请输入邮箱</string>
+    <string name="login_with_phone">手机号登录</string>
+    <string name="login_with_email">邮箱登录</string>
+    <string name="login_with_all">用户登录</string>
+    <string name="set_city_code_desc">下面的按钮模拟用户设置城市code</string>
+    <string name="please_set_city_code">请输入城市代码</string>
+    <string name="set_city_code">设置地址</string>
+    <string name="phone_format">以手机号%s作为用户名登录</string>
+    <string name="email_format">以邮箱%s作为用户名登录</string>
+    <string name="left_menu">left menu</string>
+    <string name="right_menu">分享</string>
+
+    <string name="pic_list_title">疾速追杀</string>
+    <string name="pic_list_description">动作片</string>
+    <string name="house_title">Appealathon House</string>
+    <string name="house_price">$325,000</string>
+    <string name="house_bedroom">Bedrooms</string>
+    <string name="house_bathroom">Bathrooms</string>
+    <string name="house_size">Size</string>
+    <string name="house_lot">Lot</string>
+
+    <string name="menu_app_version">版本号 %s</string>
+    <string name="user_page">用户信息</string>
+    <string name="custom_page">自定义事件</string>
+    <string name="menu">菜单</string>
+
+    <string name="login_username_hint">用户名（可任意填写）</string>
+    <string name="login_password_hint">密码（可任意填写）</string>
+
+    <string name="please_enter_username_and_password">请输入用户名和密码</string>
+
+    <string name="default_text">欢迎进入魔窗：http://www.magicwindow.cn</string>
+    <string name="nipple_title">婴儿奶嘴 母乳实感宽口径奶嘴-自控流量</string>
+    <string name="nipple_title_with_amount">婴儿奶嘴 母乳实感宽口径奶嘴 x1</string>
+    <string name="nipple_desc">萌宝用品 放生设计 实用级硅胶 模拟母乳真实感</string>
+    <string name="color_white">颜色：白色</string>
+    <string name="order_username">赵言</string>
+    <string name="order_phone">139***2340</string>
+    <string name="address">上海新静安（闸北区）市北高新</string>
+    <string name="order_price">订单金额</string>
+    <string name="pay">去付款</string>
+    <string name="pay_method">支付方式</string>
+    <string name="pay_weixin_title">微信支付</string>
+    <string name="pay_weixin_desc">微信安全支付</string>
+    <string name="pay_zhifubao_title">支付宝支付</string>
+    <string name="pay_zhifubao_desc">支付宝快捷支付</string>
+    <string name="go_pay">付款</string>
+    <string name="pay_done">订单支付成功</string>
+    <string name="go_home">回到首页</string>
+    <string name="shop_detail">商品详情</string>
+    <string name="o2o_detail">O2O详情</string>
+    <string name="news_detail">资讯详情</string>
+    <string name="video_detail">电影详情</string>
+    <string name="shop_cart">购物车</string>
+    <string name="shop_order">订单</string>
+    <string name="shop_pay">收银台</string>
+    <string name="shop_pay_done">订单支付成功</string>
+    <string name="select_pay">请选择支付方式</string>
+    <string name="order_code">订单编号：</string>
+    <string name="order_code_content">48598149115</string>
+    <string name="order_time">下单时间：</string>
+    <string name="order_channel">交易方式：</string>
+    <string name="pay_time_content">2015.09.13 14:25</string>
+    <string name="shop_detail_context">美国品牌 好奇指定授权商发货</string>
+    <string name="shop_detail_title">【官方授权】HUGGIES 好奇 银装 纸尿裤 L128片+XL104片</string>
+    <string name="community_header_content">几天前，Apple 过了它的第 40 个生日。想想 Apple 给我带来了多少好玩有趣的产品和服务，无趣地想象了一番没有 Apple 的世界，或许会有不同，我们会失去 iPod、MacBook、iTunes 甚至是上个月发布的「史上最平价的 iPhone」- iPhone SE。而到今天，我把玩 iPhone SE 已经有几天时间了，也该是时候跟大家分享这几天我的使用感受了。</string>
+    <string name="o2o_detail_price"><u>￥138.00</u></string>
+
+    <string name="newUpdateAvailable">发现新版本</string>
+    <string name="dialogPositiveButton">立即下载</string>
+    <string name="dialogNegativeButton">以后再说</string>
+    <string name="app_no_new_update">没有发现新版本</string>
+    <string name="download_progress">正在下载:%1$d%%</string>
+    <string name="download_success">下载完成，点击安装</string>
+    <string name="add_shop_cart">加入购物车</string>
+    <string name="buy_now">立即购买</string>
+
+</resources>
