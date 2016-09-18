@@ -9,24 +9,31 @@ import cn.mw.growthhacker.Config;
  * @author aaron
  * @date 16/3/3
  */
-public class HomeList {
+public class HomeListData {
     public List<ListContent> list;
 
-    public String[] bannerImages = {"http://7xql2z.com1.z0.glb.clouddn.com/growthhacker_home_banner1.png",
+
+    public String[] images = {"http://7xql2z.com1.z0.glb.clouddn.com/growthhacker_home_banner1.png",
             "http://7xql2z.com1.z0.glb.clouddn.com/growthhacker_home_banner2.png",
             "http://7xql2z.com1.z0.glb.clouddn.com/growthhacker_home_banner3.png",
             "http://7xql2z.com1.z0.glb.clouddn.com/growthhacker_home_banner4.png"
     };
 
+    public String[] mws = {Config.MW_1, Config.MW_2, Config.MW_3, Config.MW_4};
+
     public static class ListContent {
         public String title;
         public String desc;
-        public String url;
         public String mwKey;
     }
 
-    public HomeList builder(){
+    public HomeListData builder() {
         list = new ArrayList<>();
+
+        ListContent listContent0 = new ListContent();
+        list.add(listContent0);
+
+
         ListContent listContent = new ListContent();
         listContent.title = "睡不着怎么办？";
         listContent.desc = "来自[过日子]";

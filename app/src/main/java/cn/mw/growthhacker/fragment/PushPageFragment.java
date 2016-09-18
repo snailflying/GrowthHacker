@@ -5,8 +5,6 @@ import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -17,7 +15,6 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 
 import com.pizidea.imagepicker.AndroidImagePicker;
 import com.pizidea.imagepicker.bean.ImageItem;
@@ -26,15 +23,10 @@ import com.zxinsight.TrackAgent;
 import java.util.List;
 
 import cn.mw.growthhacker.RecyclerViewItemClickListener;
-import cn.mw.growthhacker.activity.NewsDetailActivity;
-import cn.mw.growthhacker.activity.O2ODetailActivity;
-import cn.mw.growthhacker.activity.ShopDetailActivity;
-import cn.mw.growthhacker.activity.TourDetailActivity;
-import cn.mw.growthhacker.activity.VideoDetailActivity;
 import cn.mw.growthhacker.adapter.DividerItemDecoration;
 import cn.mw.growthhacker.R;
 import cn.mw.growthhacker.adapter.SelectAdapter;
-import cn.mw.growthhacker.domain.PushGrid;
+import cn.mw.growthhacker.domain.PushGridData;
 import cn.mw.growthhacker.view.tab.Utils;
 import pub.devrel.easypermissions.AfterPermissionGranted;
 
@@ -89,7 +81,7 @@ public class PushPageFragment extends Fragment {
     private void initRecyclerView(View view) {
         recyclerView = (RecyclerView) view.findViewById(R.id.recycler_view);
 
-         adapter = new SelectAdapter(new PushGrid().builder());
+         adapter = new SelectAdapter(new PushGridData().builder());
 
         LinearLayoutManager mgr = new GridLayoutManager(getContext(), 3);
         mgr.setOrientation(LinearLayoutManager.VERTICAL);

@@ -9,17 +9,14 @@ import android.widget.TextView;
 import com.zxinsight.MWImageView;
 import com.zxinsight.MarketingHelper;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import cn.mw.growthhacker.Config;
 import cn.mw.growthhacker.view.NetworkImageHolderView;
 import cn.mw.growthhacker.R;
 import cn.mw.growthhacker.view.banner.ConvenientBanner;
 import cn.mw.growthhacker.view.banner.holder.CBViewHolderCreator;
-import cn.mw.growthhacker.domain.HomeList;
-import cn.mw.growthhacker.view.banner.listener.OnItemClickListener;
+import cn.mw.growthhacker.domain.HomeListData;
 
 /**
  * @author aaron
@@ -28,15 +25,16 @@ import cn.mw.growthhacker.view.banner.listener.OnItemClickListener;
 public class HomeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
 
-    int TYPE_DEFAULT = 0;
-    int TYPE0 = 1;
-    int TYPE_COUNT = TYPE0 + 1;
     MarketingHelper marketingHelper;
 
 
-    protected HomeList home = null;
+    int TYPE_DEFAULT = 0;
+    int TYPE0 = 1;
+    int TYPE_COUNT = TYPE0 + 1;
 
-    public HomeAdapter(HomeList items) {
+    protected HomeListData home = null;
+
+    public HomeAdapter(HomeListData items) {
         home = items;
     }
 
@@ -63,7 +61,6 @@ public class HomeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     @Override
     public void onBindViewHolder(final RecyclerView.ViewHolder holder, int position) {
-        final HomeList.ListContent item = home.list.get(position);
 
         int type = getItemViewType(position);
 
@@ -71,6 +68,7 @@ public class HomeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
             TopViewHolder viewHolder = (TopViewHolder) holder;
             initBanner(viewHolder.convenientBanner);
         } else {
+            final HomeListData.ListContent item = home.list.get(position);
             if (item != null) {
                 ViewHolder viewHolder = (ViewHolder) holder;
                 viewHolder.title.setText(item.title);
@@ -127,12 +125,9 @@ public class HomeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     private void initBanner(ConvenientBanner convenientBanner) {
         //自定义你的Holder，实现更多复杂的界面，不一定是图片翻页，其他任何控件翻页亦可。
-        List<String> networkImages = Arrays.asList(home.bannerImages);
-        List<String> mws = new ArrayList<>();
-        mws.add(Config.MW_1);
-        mws.add(Config.MW_2);
-        mws.add(Config.MW_3);
-        mws.add(Config.MW_4);
+        List<String> networkImages = Arrays.asList(home.images);
+        List<String> mws = Arrays.asList(home.mws);
+
 
         convenientBanner.setPages(
                 new CBViewHolderCreator<NetworkImageHolderView>() {

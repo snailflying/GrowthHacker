@@ -1,7 +1,5 @@
 package cn.mw.growthhacker.activity;
 
-import android.content.Intent;
-import android.media.Image;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.widget.Toolbar;
@@ -14,16 +12,14 @@ import android.widget.Toast;
 
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.zxinsight.MarketingHelper;
-import com.zxinsight.TrackAgent;
 import com.zxinsight.mlink.annotation.MLinkRouter;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 import cn.mw.growthhacker.Config;
 import cn.mw.growthhacker.R;
-import cn.mw.growthhacker.domain.ShopDetail;
+import cn.mw.growthhacker.domain.ShopDetailData;
 import cn.mw.growthhacker.utils.AppPrefs;
 import cn.mw.growthhacker.view.NetworkImageHolderView;
 import cn.mw.growthhacker.view.banner.ConvenientBanner;
@@ -40,7 +36,7 @@ public class ShopDetailActivity extends BaseActivity {
 
     ImageView shopDetailImg;
 
-    private ShopDetail shopDetail;
+    private ShopDetailData shopDetail;
 
 
     @Override

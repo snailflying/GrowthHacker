@@ -15,7 +15,7 @@ import com.zxinsight.mlink.annotation.MLinkRouter;
 
 import cn.mw.growthhacker.Config;
 import cn.mw.growthhacker.R;
-import cn.mw.growthhacker.domain.O2ODetail;
+import cn.mw.growthhacker.domain.O2ODetailData;
 import cn.mw.growthhacker.utils.AppPrefs;
 
 
@@ -57,7 +57,7 @@ public class O2ODetailActivity extends BaseActivity {
 
     private void displayImage() {
         o2oHeader = (ImageView) findViewById(R.id.header);
-        O2ODetail detail = AppPrefs.get(this).getO2ODetail();
+        O2ODetailData detail = AppPrefs.get(this).getO2ODetail();
         ImageLoader.getInstance().displayImage(detail.detail, o2oHeader);
 
     }

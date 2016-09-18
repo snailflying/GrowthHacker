@@ -20,7 +20,7 @@ import com.zxinsight.MWImageView;
 import java.util.List;
 
 import cn.mw.growthhacker.R;
-import cn.mw.growthhacker.domain.PushGrid;
+import cn.mw.growthhacker.domain.PushGridData;
 import cn.mw.growthhacker.fragment.PushPageFragment;
 import cn.mw.growthhacker.view.tab.Utils;
 import pub.devrel.easypermissions.AfterPermissionGranted;
@@ -31,7 +31,6 @@ import pub.devrel.easypermissions.AfterPermissionGranted;
  */
 public class SelectAdapter extends RecyclerView.Adapter<SelectAdapter.ViewHolder>  {
 
-
     int TYPE_DEFAULT = 0;
     int TYPE0 = 1;
     int TYPE_COUNT = TYPE0 + 1;
@@ -40,11 +39,11 @@ public class SelectAdapter extends RecyclerView.Adapter<SelectAdapter.ViewHolder
 
     private static final int RC_CAMERA_PERM = 123;
 
-    protected List<PushGrid.ListContent> mList = null;
+    protected List<PushGridData.ListContent> mList = null;
     private boolean isShowCamera = true;
     private String TAG = "SelectAdapter";
 
-    public SelectAdapter(PushGrid items) {
+    public SelectAdapter(PushGridData items) {
         mList = items.list;
     }
 
@@ -62,7 +61,7 @@ public class SelectAdapter extends RecyclerView.Adapter<SelectAdapter.ViewHolder
     }
 
     public void add(String path, int position) {
-        PushGrid.ListContent grid = new PushGrid.ListContent();
+        PushGridData.ListContent grid = new PushGridData.ListContent();
         grid.imgPath = path;
         mList.add(position, grid);
         notifyItemInserted(position);
@@ -79,9 +78,10 @@ public class SelectAdapter extends RecyclerView.Adapter<SelectAdapter.ViewHolder
     public void onBindViewHolder(final ViewHolder holder, int position) {
         int type = getItemViewType(position);
         Log.e(TAG,"type = "+type);
+        final PushGridData.ListContent item = mList.get(position);
 
         if (type == TYPE0) {
-            holder.listBg.setImageResource(R.drawable.add);
+            holder.listBg.setImageResource(item.imgRes);
             holder.listBg.setTag(PushPageFragment.ADD);
             holder.listBg.getRootView().setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -90,7 +90,6 @@ public class SelectAdapter extends RecyclerView.Adapter<SelectAdapter.ViewHolder
                 }
             });
         } else {
-            final PushGrid.ListContent item = mList.get(position);
             if (item != null) {
                 if(!TextUtils.isEmpty(item.imgPath)){
                     Bitmap bmp= BitmapFactory.decodeFile(item.imgPath);
@@ -132,9 +131,9 @@ public class SelectAdapter extends RecyclerView.Adapter<SelectAdapter.ViewHolder
 
     @Override
     public int getItemCount() {
-        int a = mList.size()+1;
+        int a = mList.size();
         Log.e(TAG,"getItemCount = "+a);
-        return mList.size()+1;
+        return mList.size();
     }
 
 

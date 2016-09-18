@@ -1,7 +1,6 @@
 package cn.mw.growthhacker.activity;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -17,7 +16,7 @@ import com.zxinsight.MarketingHelper;
 
 import cn.mw.growthhacker.Config;
 import cn.mw.growthhacker.R;
-import cn.mw.growthhacker.domain.TravelDetail;
+import cn.mw.growthhacker.domain.TravelDetailData;
 import cn.mw.growthhacker.utils.AppPrefs;
 
 /**
@@ -93,7 +92,7 @@ public class TourDetailActivity extends BaseActivity {
         hotel_img = (ImageView) findViewById(R.id.hotel_img);
         travel_img01 = (ImageView) findViewById(R.id.travel_img01);
         travel_img02 = (ImageView) findViewById(R.id.travel_img02);
-        TravelDetail detail = AppPrefs.get(this).getTravelDetail();
+        TravelDetailData detail = AppPrefs.get(this).getTravelDetail();
         ImageLoader.getInstance().displayImage(detail.banner, tour_detail_banner);
         ImageLoader.getInstance().displayImage(detail.map, map_img);
         ImageLoader.getInstance().displayImage(detail.stay, hotel_img);

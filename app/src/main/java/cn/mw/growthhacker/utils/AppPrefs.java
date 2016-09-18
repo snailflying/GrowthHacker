@@ -1,17 +1,14 @@
 package cn.mw.growthhacker.utils;
 
 import android.content.Context;
-import android.text.TextUtils;
-import android.util.Log;
 
 
 import java.io.IOException;
-import java.util.ArrayList;
 
 import cn.mw.growthhacker.Config;
-import cn.mw.growthhacker.domain.O2ODetail;
-import cn.mw.growthhacker.domain.ShopDetail;
-import cn.mw.growthhacker.domain.TravelDetail;
+import cn.mw.growthhacker.domain.O2ODetailData;
+import cn.mw.growthhacker.domain.ShopDetailData;
+import cn.mw.growthhacker.domain.TravelDetailData;
 
 /**
  * Created by Tony Shen on 15/12/14.
@@ -139,13 +136,13 @@ public class AppPrefs extends BasePrefs {
 //    }
 
 //
-    public ShopDetail getShopDetail() {
-        ShopDetail detail = new ShopDetail();
+    public ShopDetailData getShopDetail() {
+        ShopDetailData detail = new ShopDetailData();
         String shopDetail = getString(Config.shopDetail, "");
 
         if (isOK(shopDetail)) {
             try {
-                detail = RestUtil.parseAs(ShopDetail.class, shopDetail);
+                detail = RestUtil.parseAs(ShopDetailData.class, shopDetail);
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -153,12 +150,12 @@ public class AppPrefs extends BasePrefs {
         return detail;
     }
 //
-    public O2ODetail getO2ODetail() {
-        O2ODetail detail = new O2ODetail();
+    public O2ODetailData getO2ODetail() {
+        O2ODetailData detail = new O2ODetailData();
         String o2oDetail = getString(Config.o2oDetail, "");
         if (isOK(o2oDetail)) {
             try {
-                detail = RestUtil.parseAs(O2ODetail.class, o2oDetail);
+                detail = RestUtil.parseAs(O2ODetailData.class, o2oDetail);
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -166,12 +163,12 @@ public class AppPrefs extends BasePrefs {
         return detail;
     }
 
-    public TravelDetail getTravelDetail() {
-        TravelDetail detail = new TravelDetail();
+    public TravelDetailData getTravelDetail() {
+        TravelDetailData detail = new TravelDetailData();
         String travelDetail = getString(Config.travelDetail, "");
         if (isOK(travelDetail)) {
             try {
-                detail = RestUtil.parseAs(TravelDetail.class, travelDetail);
+                detail = RestUtil.parseAs(TravelDetailData.class, travelDetail);
             } catch (IOException e) {
                 e.printStackTrace();
             }

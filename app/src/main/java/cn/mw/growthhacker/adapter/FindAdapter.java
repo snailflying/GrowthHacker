@@ -1,6 +1,5 @@
 package cn.mw.growthhacker.adapter;
 
-import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,10 +8,8 @@ import android.view.ViewGroup;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.zxinsight.MWImageView;
 
-import java.util.List;
-
 import cn.mw.growthhacker.R;
-import cn.mw.growthhacker.domain.FindList;
+import cn.mw.growthhacker.domain.FindListData;
 
 /**
  * @author aaron
@@ -25,9 +22,9 @@ public class FindAdapter extends RecyclerView.Adapter<FindAdapter.ViewHolder> {
     int TYPE0 = 1;
     int TYPE_COUNT = TYPE0 + 1;
 
-    protected FindList mList = null;
+    protected FindListData mList = null;
 
-    public FindAdapter(FindList items) {
+    public FindAdapter(FindListData items) {
         mList = items;
     }
 
@@ -41,7 +38,7 @@ public class FindAdapter extends RecyclerView.Adapter<FindAdapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(final ViewHolder holder, int position) {
-        final FindList.ListContent item = mList.list.get(position);
+        final FindListData.ListContent item = mList.list.get(position);
 
         if (item != null) {
 //            holder.convenientBanner.setImageResource(R.drawable.add);

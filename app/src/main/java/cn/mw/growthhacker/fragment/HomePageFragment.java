@@ -14,7 +14,7 @@ import com.zxinsight.TrackAgent;
 import cn.mw.growthhacker.adapter.DividerItemDecoration;
 import cn.mw.growthhacker.adapter.HomeAdapter;
 import cn.mw.growthhacker.R;
-import cn.mw.growthhacker.domain.HomeList;
+import cn.mw.growthhacker.domain.HomeListData;
 
 /**
  * Created by aaron on 16/9/12.
@@ -64,7 +64,7 @@ public class HomePageFragment extends Fragment {
     private void initRecyclerView(View view){
         recyclerView = (RecyclerView) view.findViewById(R.id.recycler_view);
 
-        HomeAdapter adapter = new HomeAdapter(new HomeList().builder());
+        HomeAdapter adapter = new HomeAdapter(new HomeListData().builder());
 
 
         LinearLayoutManager mgr = new LinearLayoutManager(getContext());

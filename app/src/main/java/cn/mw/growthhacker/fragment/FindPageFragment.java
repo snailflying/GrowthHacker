@@ -23,7 +23,7 @@ import cn.mw.growthhacker.activity.VideoDetailActivity;
 import cn.mw.growthhacker.adapter.DividerItemDecoration;
 import cn.mw.growthhacker.adapter.FindAdapter;
 import cn.mw.growthhacker.R;
-import cn.mw.growthhacker.domain.FindList;
+import cn.mw.growthhacker.domain.FindListData;
 
 /**
  * Created by aaron on 16/9/12.
@@ -80,7 +80,7 @@ public class FindPageFragment extends Fragment {
     private void initRecyclerView(View view) {
         recyclerView = (RecyclerView) view.findViewById(R.id.recycler_view);
 
-        FindAdapter adapter = new FindAdapter(new FindList().builder());
+        FindAdapter adapter = new FindAdapter(new FindListData().builder());
 
 
         LinearLayoutManager mgr = new LinearLayoutManager(getContext());

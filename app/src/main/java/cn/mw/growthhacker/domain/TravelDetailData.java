@@ -7,7 +7,7 @@ import java.util.List;
  * @date 16/4/23
  */
 
-public class TravelDetail {
+public class TravelDetailData {
     public String banner;
     public String map;
     public String stay;

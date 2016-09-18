@@ -10,7 +10,7 @@ import cn.mw.growthhacker.R;
  * @author aaron
  * @date 16/3/3
  */
-public class FindList {
+public class FindListData {
     public List<ListContent> list;
     public String[] imgUrls = {"http://7xql2z.com1.z0.glb.clouddn.com/growthhacker_home_banner1.png",
             "http://7xql2z.com1.z0.glb.clouddn.com/growthhacker_home_banner2.png",
@@ -24,7 +24,7 @@ public class FindList {
         public String mwKey;
     }
 
-    public FindList builder(){
+    public FindListData builder(){
         list = new ArrayList<>();
         ListContent listContent = new ListContent();
         listContent.imgRes = R.drawable.default_img;

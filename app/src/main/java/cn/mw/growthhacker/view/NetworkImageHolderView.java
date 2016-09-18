@@ -5,6 +5,7 @@ import android.view.View;
 import android.widget.ImageView;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.zxinsight.MWImageView;
+import com.zxinsight.MarketingHelper;
 
 import cn.mw.growthhacker.Config;
 import cn.mw.growthhacker.R;
@@ -23,9 +24,9 @@ public class NetworkImageHolderView implements Holder<String> {
     @Override
     public void UpdateUI(Context context, int position, String data,String mwKey) {
         imageView.setImageResource(R.drawable.ic_default);
-        imageView.bindEvent(mwKey);
 //        initViews(position);
         ImageLoader.getInstance().displayImage(data,imageView);
+        imageView.bindEvent(mwKey);
     }
 
     private void initViews(int position) {
