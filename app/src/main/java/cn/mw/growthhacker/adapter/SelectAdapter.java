@@ -29,7 +29,7 @@ import pub.devrel.easypermissions.AfterPermissionGranted;
  * @author aaron
  * @date 15/11/25
  */
-public class SelectAdapter extends RecyclerView.Adapter<SelectAdapter.ViewHolder>  {
+public class SelectAdapter extends RecyclerView.Adapter<SelectAdapter.ViewHolder> {
 
     int TYPE_DEFAULT = 0;
     int TYPE0 = 1;
@@ -70,29 +70,24 @@ public class SelectAdapter extends RecyclerView.Adapter<SelectAdapter.ViewHolder
     @Override
     public int getItemViewType(int position) {
         // TODO Auto-generated method stub
-        return position == getItemCount()-1 ? TYPE0 : TYPE_DEFAULT;
+        return position == getItemCount() - 1 ? TYPE0 : TYPE_DEFAULT;
     }
 
 
     @Override
     public void onBindViewHolder(final ViewHolder holder, int position) {
         int type = getItemViewType(position);
-        Log.e(TAG,"type = "+type);
+        Log.e(TAG, "position = " + position + ",type = " + type);
         final PushGridData.ListContent item = mList.get(position);
 
         if (type == TYPE0) {
             holder.listBg.setImageResource(item.imgRes);
             holder.listBg.setTag(PushPageFragment.ADD);
-            holder.listBg.getRootView().setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-//                    storageTask(holder.listBg.getContext());
-                }
-            });
+
         } else {
             if (item != null) {
-                if(!TextUtils.isEmpty(item.imgPath)){
-                    Bitmap bmp= BitmapFactory.decodeFile(item.imgPath);
+                if (!TextUtils.isEmpty(item.imgPath)) {
+                    Bitmap bmp = BitmapFactory.decodeFile(item.imgPath);
                     holder.listBg.setImageBitmap(bmp);
                 } else {
                     holder.listBg.setImageResource(item.imgRes);
@@ -107,13 +102,13 @@ public class SelectAdapter extends RecyclerView.Adapter<SelectAdapter.ViewHolder
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
     @AfterPermissionGranted(RC_CAMERA_PERM)
     private void storageTask(Context context) {
-        if (Utils.selfPermissionGranted(context,Manifest.permission.READ_EXTERNAL_STORAGE)) {
+        if (Utils.selfPermissionGranted(context, Manifest.permission.READ_EXTERNAL_STORAGE)) {
             // Have permission, do the thing!
             AndroidImagePicker.getInstance().pickSingle(context, isShowCamera, new AndroidImagePicker.OnImagePickCompleteListener() {
                 @Override
                 public void onImagePickComplete(List<ImageItem> items) {
-                    if(items != null && items.size() > 0){
-                        Log.i("SelectAdapter","image = "+items.get(0).path);
+                    if (items != null && items.size() > 0) {
+                        Log.i("SelectAdapter", "image = " + items.get(0).path);
 //                                mAdapter.clear();
 //                                mAdapter.addAll(items);
 
@@ -132,7 +127,7 @@ public class SelectAdapter extends RecyclerView.Adapter<SelectAdapter.ViewHolder
     @Override
     public int getItemCount() {
         int a = mList.size();
-        Log.e(TAG,"getItemCount = "+a);
+        Log.e(TAG, "getItemCount = " + a);
         return mList.size();
     }
 

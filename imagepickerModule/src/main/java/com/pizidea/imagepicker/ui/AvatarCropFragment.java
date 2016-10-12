@@ -128,8 +128,7 @@ public class AvatarCropFragment extends Fragment{
         Rect centerRect = mRectView.getCropRect();
         RectF matrixRect = superImageView.getMatrixRect();
 
-        Bitmap bmp = AndroidImagePicker.makeCropBitmap(srcBitmap, centerRect, matrixRect, expectSize);
-        return bmp;
+        return AndroidImagePicker.makeCropBitmap(srcBitmap, centerRect, matrixRect, expectSize);
     }
 
 

@@ -285,10 +285,9 @@ public class AndroidImagePicker {
 
     public static Bitmap makeCropBitmap(Bitmap bitmap,Rect rectBox,RectF imageMatrixRect,int expectSize){
         Bitmap bmp = bitmap;
-        RectF localRectF = imageMatrixRect;
-        float f = localRectF.width() / bmp.getWidth();
-        int left = (int) ((rectBox.left - localRectF.left) / f);
-        int top = (int) ((rectBox.top - localRectF.top) / f);
+        float f = imageMatrixRect.width() / bmp.getWidth();
+        int left = (int) ((rectBox.left - imageMatrixRect.left) / f);
+        int top = (int) ((rectBox.top - imageMatrixRect.top) / f);
         int width = (int) (rectBox.width() / f);
         int height = (int) (rectBox.height() / f);
 

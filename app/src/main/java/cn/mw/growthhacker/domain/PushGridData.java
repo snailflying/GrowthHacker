@@ -33,7 +33,7 @@ public class PushGridData {
 
         ListContent listContent3 = new ListContent();
         listContent3.imgRes = R.drawable.add;
-        list.add(listContent1);
+        list.add(listContent3);
 //        ListContent listContent2 = new ListContent();
 //        listContent2.desc = "来自[迷橙]";
 //        listContent2.mwKey = Config.MW_1;
