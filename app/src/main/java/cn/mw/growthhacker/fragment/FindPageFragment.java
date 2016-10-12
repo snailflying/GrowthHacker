@@ -10,10 +10,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.zxinsight.TrackAgent;
-
 import java.util.List;
 
+import cn.magicwindow.TrackAgent;
 import cn.mw.growthhacker.RecyclerViewItemClickListener;
 import cn.mw.growthhacker.activity.NewsDetailActivity;
 import cn.mw.growthhacker.activity.O2ODetailActivity;

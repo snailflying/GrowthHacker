@@ -9,8 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.zxinsight.TrackAgent;
-
+import cn.magicwindow.TrackAgent;
 import cn.mw.growthhacker.adapter.DividerItemDecoration;
 import cn.mw.growthhacker.adapter.HomeAdapter;
 import cn.mw.growthhacker.R;

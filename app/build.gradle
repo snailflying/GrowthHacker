@@ -42,7 +42,7 @@ repositories {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile(name:'material-ripple-1.0.2', ext:'aar')
-    compile(name: 'MagicWindowSDK', ext: 'aar')
+//    compile(name: 'MagicWindowSDK', ext: 'aar')
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:24.2.0'
     //    compile 'me.majiajie:pager-bottom-tab-strip:1.0.0'

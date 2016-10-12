@@ -15,10 +15,10 @@ import android.view.ViewGroup;
 
 import com.pizidea.imagepicker.AndroidImagePicker;
 import com.pizidea.imagepicker.bean.ImageItem;
-import com.zxinsight.MWImageView;
 
 import java.util.List;
 
+import cn.magicwindow.MWImageView;
 import cn.mw.growthhacker.R;
 import cn.mw.growthhacker.domain.PushGridData;
 import cn.mw.growthhacker.fragment.PushPageFragment;

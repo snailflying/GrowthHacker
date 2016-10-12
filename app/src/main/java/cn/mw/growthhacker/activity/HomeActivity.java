@@ -3,9 +3,8 @@ package cn.mw.growthhacker.activity;
 import android.Manifest;
 import android.annotation.TargetApi;
 import android.os.Build;
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v4.view.ViewPager;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
@@ -19,8 +18,10 @@ import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
 
-import cn.mw.growthhacker.adapter.BottomFragmentPagerAdapter;
+import cn.magicwindow.MWConfiguration;
+import cn.magicwindow.MagicWindowSDK;
 import cn.mw.growthhacker.R;
+import cn.mw.growthhacker.adapter.BottomFragmentPagerAdapter;
 import cn.mw.growthhacker.view.tab.Controller;
 import cn.mw.growthhacker.view.tab.PagerBottomTabLayout;
 import cn.mw.growthhacker.view.tab.TabItemBuilder;
@@ -31,10 +32,9 @@ import pub.devrel.easypermissions.EasyPermissions;
 
 public class HomeActivity extends BaseActivity {
 
+    private static final int RC_CAMERA_PERM = 123;
     int[] testColors = {0xFF00796B, 0xFF5B4947, 0xFF607D8B, 0xFFF57C00, 0xFFF57C00};
     private Controller controller;
-
-    private static final int RC_CAMERA_PERM = 123;
     private String TAG = "HomeActivity";
 
     @Override
@@ -47,6 +47,26 @@ public class HomeActivity extends BaseActivity {
         cameraTask();
     }
 
+
+    private void initMW() {
+        long t1 = System.currentTimeMillis();
+        MWConfiguration config = new MWConfiguration(this);
+        long t2 = System.currentTimeMillis();
+
+        config.setChannel("魔窗")
+                .setPageTrackWithFragment(true)
+                .setSharePlatform(MWConfiguration.ORIGINAL);
+        long t3 = System.currentTimeMillis();
+
+        MagicWindowSDK.initSDK(config);
+        long t4 = System.currentTimeMillis();
+        long time = t2 - t1;
+        long time1 = t3 - t2;
+        long time2 = t4 - t3;
+        long time3 = t4 - t1;
+        Log.e("aaron", "time = " + time + ",time1 = " + time1 + ",time2 = " + time2 + ",time3 = " + time3);
+
+    }
 
     private void initToolBar() {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -80,7 +100,7 @@ public class HomeActivity extends BaseActivity {
 
             @Override
             public void onPageSelected(int position) {
-                if (controller != null){
+                if (controller != null) {
                     controller.setSelect(position);
                 }
                 invalidateOptionsMenu();

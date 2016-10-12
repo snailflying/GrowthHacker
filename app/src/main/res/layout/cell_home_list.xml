@@ -3,7 +3,7 @@
     android:layout_height="100dp">
 
 
-    <com.zxinsight.MWImageView
+    <cn.magicwindow.MWImageView
         android:id="@+id/detail_icon"
         android:layout_width="80dp"
         android:layout_height="80dp"

@@ -18,10 +18,10 @@ import android.view.ViewGroup;
 
 import com.pizidea.imagepicker.AndroidImagePicker;
 import com.pizidea.imagepicker.bean.ImageItem;
-import com.zxinsight.TrackAgent;
 
 import java.util.List;
 
+import cn.magicwindow.TrackAgent;
 import cn.mw.growthhacker.RecyclerViewItemClickListener;
 import cn.mw.growthhacker.adapter.DividerItemDecoration;
 import cn.mw.growthhacker.R;

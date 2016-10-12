@@ -27,6 +27,15 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:scheme="growthHacker" />
+            </intent-filter>
         </activity>
 
         <activity android:name=".activity.ShopDetailActivity" />
@@ -65,7 +74,7 @@
 
         <!-- 主activity，必加 -->
         <activity
-            android:name="com.zxinsight.common.base.MWActivity"
+            android:name="cn.magicwindow.common.MWActivity"
             android:configChanges="orientation|keyboardHidden|screenSize|navigation"
             android:exported="true">
             <intent-filter>

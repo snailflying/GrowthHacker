@@ -11,8 +11,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.nostra13.universalimageloader.core.ImageLoader;
-import com.zxinsight.MWImageView;
-import com.zxinsight.MarketingHelper;
+import cn.magicwindow.MWImageView;
+import cn.magicwindow.MarketingHelper;
 
 import cn.mw.growthhacker.Config;
 import cn.mw.growthhacker.R;

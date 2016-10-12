@@ -4,8 +4,7 @@ import android.content.Context;
 import android.view.View;
 import android.widget.ImageView;
 import com.nostra13.universalimageloader.core.ImageLoader;
-import com.zxinsight.MWImageView;
-import com.zxinsight.MarketingHelper;
+import cn.magicwindow.MWImageView;
 
 import cn.mw.growthhacker.Config;
 import cn.mw.growthhacker.R;
