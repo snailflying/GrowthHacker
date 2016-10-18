@@ -34,7 +34,7 @@
                 <category android:name="android.intent.category.BROWSABLE" />
 
                 <data
-                    android:scheme="growthHacker" />
+                    android:scheme="growthhacker" />
             </intent-filter>
         </activity>
 

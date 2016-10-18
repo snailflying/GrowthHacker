@@ -2,6 +2,7 @@ package cn.mw.growthhacker.activity;
 
 import android.Manifest;
 import android.annotation.TargetApi;
+import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
@@ -18,8 +19,12 @@ import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
 
+import cn.magicwindow.MLink;
+import cn.magicwindow.MLinkAPIFactory;
 import cn.magicwindow.MWConfiguration;
 import cn.magicwindow.MagicWindowSDK;
+import cn.magicwindow.mlink.YYBCallback;
+import cn.magicwindow.mlink.annotation.MLinkDefaultRouter;
 import cn.mw.growthhacker.R;
 import cn.mw.growthhacker.adapter.BottomFragmentPagerAdapter;
 import cn.mw.growthhacker.view.tab.Controller;
@@ -30,6 +35,7 @@ import cn.mw.growthhacker.view.tab.listener.OnTabItemSelectListener;
 import pub.devrel.easypermissions.EasyPermissions;
 
 
+@MLinkDefaultRouter
 public class HomeActivity extends BaseActivity {
 
     private static final int RC_CAMERA_PERM = 123;
@@ -45,27 +51,17 @@ public class HomeActivity extends BaseActivity {
         initImageLoader();
         initBottom();
         cameraTask();
+        initMW();
     }
 
 
     private void initMW() {
-        long t1 = System.currentTimeMillis();
-        MWConfiguration config = new MWConfiguration(this);
-        long t2 = System.currentTimeMillis();
-
-        config.setChannel("魔窗")
-                .setPageTrackWithFragment(true)
-                .setSharePlatform(MWConfiguration.ORIGINAL);
-        long t3 = System.currentTimeMillis();
-
-        MagicWindowSDK.initSDK(config);
-        long t4 = System.currentTimeMillis();
-        long time = t2 - t1;
-        long time1 = t3 - t2;
-        long time2 = t4 - t3;
-        long time3 = t4 - t1;
-        Log.e("aaron", "time = " + time + ",time1 = " + time1 + ",time2 = " + time2 + ",time3 = " + time3);
-
+        MLink.getInstance(this).registerWithAnnotation(this);
+        if(getIntent().getData()!=null){
+            MLink.getInstance(this).router(getIntent().getData());
+        } else {
+            MLinkAPIFactory.createAPI(this).checkYYB();
+        }
     }
 
     private void initToolBar() {
