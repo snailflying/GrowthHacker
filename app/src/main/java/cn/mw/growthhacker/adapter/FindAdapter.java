@@ -6,7 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.nostra13.universalimageloader.core.ImageLoader;
-import cn.magicwindow.MWImageView;
+import com.zxinsight.MWImageView;
 
 import cn.mw.growthhacker.R;
 import cn.mw.growthhacker.domain.FindListData;

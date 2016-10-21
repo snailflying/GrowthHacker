@@ -12,7 +12,7 @@ import android.view.ViewGroup;
 
 import java.util.List;
 
-import cn.magicwindow.TrackAgent;
+import com.zxinsight.TrackAgent;
 import cn.mw.growthhacker.RecyclerViewItemClickListener;
 import cn.mw.growthhacker.activity.NewsDetailActivity;
 import cn.mw.growthhacker.activity.O2ODetailActivity;

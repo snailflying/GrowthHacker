@@ -18,7 +18,7 @@ import com.pizidea.imagepicker.bean.ImageItem;
 
 import java.util.List;
 
-import cn.magicwindow.MWImageView;
+import com.zxinsight.MWImageView;
 import cn.mw.growthhacker.R;
 import cn.mw.growthhacker.domain.PushGridData;
 import cn.mw.growthhacker.fragment.PushPageFragment;

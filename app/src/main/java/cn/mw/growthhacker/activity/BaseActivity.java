@@ -2,7 +2,7 @@ package cn.mw.growthhacker.activity;
 
 import android.support.v7.app.AppCompatActivity;
 
-import cn.magicwindow.Session;
+import com.zxinsight.Session;
 
 
 /**

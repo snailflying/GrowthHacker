@@ -4,12 +4,13 @@ import android.app.Application;
 import android.util.Log;
 
 
+import com.zxinsight.MWConfiguration;
+import com.zxinsight.MagicWindowSDK;
+
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-import cn.magicwindow.MWConfiguration;
-import cn.magicwindow.MagicWindowSDK;
 import cn.mw.growthhacker.Config;
 import cn.mw.growthhacker.utils.AppPrefs;
 
@@ -83,7 +84,7 @@ private void initMW() {
 
     config.setChannel("魔窗")
             //todo:del debug model
-            .setLogEnable(true)
+//            .setLogEnable(true)
             .setPageTrackWithFragment(true)
             .setSharePlatform(MWConfiguration.ORIGINAL);
     long t3 = System.currentTimeMillis();

@@ -10,9 +10,9 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.nostra13.universalimageloader.core.ImageLoader;
+import com.zxinsight.MarketingHelper;
+import com.zxinsight.mlink.annotation.MLinkRouter;
 
-import cn.magicwindow.MarketingHelper;
-import cn.magicwindow.mlink.annotation.MLinkRouter;
 import cn.mw.growthhacker.Config;
 import cn.mw.growthhacker.R;
 import cn.mw.growthhacker.domain.O2ODetailData;

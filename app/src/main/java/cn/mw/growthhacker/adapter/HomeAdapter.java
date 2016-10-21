@@ -6,12 +6,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import cn.magicwindow.MWImageView;
+import com.zxinsight.MWImageView;
 
 import java.util.Arrays;
 import java.util.List;
 
-import cn.magicwindow.MarketingHelper;
+import com.zxinsight.MarketingHelper;
 import cn.mw.growthhacker.view.NetworkImageHolderView;
 import cn.mw.growthhacker.R;
 import cn.mw.growthhacker.view.banner.ConvenientBanner;

@@ -21,7 +21,7 @@ import com.pizidea.imagepicker.bean.ImageItem;
 
 import java.util.List;
 
-import cn.magicwindow.TrackAgent;
+import com.zxinsight.TrackAgent;
 import cn.mw.growthhacker.RecyclerViewItemClickListener;
 import cn.mw.growthhacker.adapter.DividerItemDecoration;
 import cn.mw.growthhacker.R;

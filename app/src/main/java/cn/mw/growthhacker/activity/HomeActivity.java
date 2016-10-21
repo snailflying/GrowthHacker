@@ -2,7 +2,6 @@ package cn.mw.growthhacker.activity;
 
 import android.Manifest;
 import android.annotation.TargetApi;
-import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
@@ -18,13 +17,9 @@ import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
+import com.zxinsight.MLink;
+import com.zxinsight.mlink.annotation.MLinkDefaultRouter;
 
-import cn.magicwindow.MLink;
-import cn.magicwindow.MLinkAPIFactory;
-import cn.magicwindow.MWConfiguration;
-import cn.magicwindow.MagicWindowSDK;
-import cn.magicwindow.mlink.YYBCallback;
-import cn.magicwindow.mlink.annotation.MLinkDefaultRouter;
 import cn.mw.growthhacker.R;
 import cn.mw.growthhacker.adapter.BottomFragmentPagerAdapter;
 import cn.mw.growthhacker.view.tab.Controller;
@@ -56,11 +51,17 @@ public class HomeActivity extends BaseActivity {
 
 
     private void initMW() {
+//        MLinkAPIFactory.createAPI(this).registerDefault(new MLinkCallback() {
+//            @Override
+//            public void execute(Map<String, String> map, Uri uri, Context context) {
+//                //// TODO: 2016/10/18 由于默认页便是此页，所以此处不用写相关逻辑。
+//            }
+//        });
         MLink.getInstance(this).registerWithAnnotation(this);
-        if(getIntent().getData()!=null){
+        if (getIntent().getData() != null) {
             MLink.getInstance(this).router(getIntent().getData());
         } else {
-            MLinkAPIFactory.createAPI(this).checkYYB();
+            MLink.getInstance(this).checkYYB();
         }
     }
 
