@@ -21,7 +21,10 @@ import com.pizidea.imagepicker.bean.ImageItem;
 
 import java.util.List;
 
+import com.zxinsight.MarketingHelper;
 import com.zxinsight.TrackAgent;
+
+import cn.mw.growthhacker.Config;
 import cn.mw.growthhacker.RecyclerViewItemClickListener;
 import cn.mw.growthhacker.adapter.DividerItemDecoration;
 import cn.mw.growthhacker.R;
@@ -93,7 +96,12 @@ public class PushPageFragment extends Fragment {
             public void onItemClick(View view, int position) {
                 Log.e(TAG,"position:"+position +",view:"+view+",viewTag:"+view.getTag());
                 if(ADD.equals(view.getTag())){
-                    storageTask(view.getContext(),position);
+                    if(MarketingHelper.currentMarketing(view.getContext()).isActive(Config.MW_PHOTO)){
+//                        MarketingHelper.currentMarketing(view.getContext()).clickWithAll(view.getContext(),Config.MW_PHOTO);
+                        MarketingHelper.currentMarketing(view.getContext()).clickWithAll(view.getContext(), Config.MW_PHOTO, Config.CameraCallBack,null,null,null);
+                    } else {
+                        storageTask(view.getContext(),position);
+                    }
                 } else {
                     adapter.remove(position);
                 }

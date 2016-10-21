@@ -5,6 +5,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
+import cn.mw.growthhacker.Config;
 import cn.mw.growthhacker.fragment.FindPageFragment;
 import cn.mw.growthhacker.fragment.HomePageFragment;
 import cn.mw.growthhacker.fragment.PushPageFragment;
@@ -21,9 +22,9 @@ public class BottomFragmentPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        if(position ==0){
+        if(position == Config.HOME){
             return HomePageFragment.newInstance(position + 1);
-        }else if(position ==1) {
+        }else if(position ==Config.PUSH) {
             return PushPageFragment.newInstance(position + 1);
         } else {
             return FindPageFragment.newInstance(position + 1);

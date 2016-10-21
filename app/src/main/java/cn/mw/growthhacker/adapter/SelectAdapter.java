@@ -19,6 +19,9 @@ import com.pizidea.imagepicker.bean.ImageItem;
 import java.util.List;
 
 import com.zxinsight.MWImageView;
+import com.zxinsight.MarketingHelper;
+
+import cn.mw.growthhacker.Config;
 import cn.mw.growthhacker.R;
 import cn.mw.growthhacker.domain.PushGridData;
 import cn.mw.growthhacker.fragment.PushPageFragment;
@@ -81,7 +84,13 @@ public class SelectAdapter extends RecyclerView.Adapter<SelectAdapter.ViewHolder
         final PushGridData.ListContent item = mList.get(position);
 
         if (type == TYPE0) {
+//            if(MarketingHelper.currentMarketing(mContext).isActive(Config.MW_PHOTO)){
+//                holder.listBg.bindEvent(mContext,Config.MW_PHOTO);
+//            } else {
+//                holder.listBg.setImageResource(item.imgRes);
+//            }
             holder.listBg.setImageResource(item.imgRes);
+
             holder.listBg.setTag(PushPageFragment.ADD);
 
         } else {

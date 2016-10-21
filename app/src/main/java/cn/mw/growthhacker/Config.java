@@ -4,6 +4,13 @@ package cn.mw.growthhacker;
  * Created by aaron on 16/9/12.
  */
 public class Config {
+
+    public static final int HOME = 0;
+    public static final int PUSH = 1;
+    public static final int FIND = 2;
+
+
+
     //首页banner
     public static final String MW_1 = "SFHQEJM8";    //第1个魔窗位
     public static final String MW_2 = "VX56MQRY";    //第2个魔窗位
@@ -28,7 +35,9 @@ public class Config {
     public static final String MW_Ctrip_Hotel = "AFJ3BDSX";
     public static final String MW_Ctrip_Flight = "Q8FGVK3C";
     //拍照
-    public static final String MW_29 = "2PUG2WMI";
+    public static final String MW_PHOTO = "2PUG2WMI";
+
+    public static final String CameraCallBack = "CameraCallBack";
 
     public static final String MW_NEWS_SHARE = "PRVDCXLS";
     public static final String MW_O2O_SHARE = "TRHQJLTS";

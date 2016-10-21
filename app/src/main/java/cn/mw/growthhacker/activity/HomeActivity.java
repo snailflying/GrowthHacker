@@ -20,6 +20,7 @@ import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
 import com.zxinsight.MLink;
 import com.zxinsight.mlink.annotation.MLinkDefaultRouter;
 
+import cn.mw.growthhacker.Config;
 import cn.mw.growthhacker.R;
 import cn.mw.growthhacker.adapter.BottomFragmentPagerAdapter;
 import cn.mw.growthhacker.view.tab.Controller;
@@ -58,8 +59,14 @@ public class HomeActivity extends BaseActivity {
 //            }
 //        });
         MLink.getInstance(this).registerWithAnnotation(this);
+        Log.e(TAG, "uri:" + getIntent().getData());
         if (getIntent().getData() != null) {
             MLink.getInstance(this).router(getIntent().getData());
+
+            if(getIntent().getData().getEncodedQuery().contains("push_page")){
+                controller.setSelect(Config.PUSH);
+            }
+            Toast.makeText(this,getIntent().getDataString(),Toast.LENGTH_LONG).show();
         } else {
             MLink.getInstance(this).checkYYB();
         }
